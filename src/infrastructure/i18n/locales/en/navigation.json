@@ -1,0 +1,18 @@
+{
+  "discover": "Discover",
+  "discoverDesc": "Swipe to find today's cravings",
+  "explore": "Explore",
+  "exploreDesc": "Regional Vietnamese cuisine catalog",
+  "favorites": "Favorites",
+  "favoritesDesc": "Your saved dishes",
+  "planner": "Planner",
+  "plannerDesc": "7-day manual meal planning",
+  "recipes": "Recipes",
+  "recipesDesc": "Ingredient gram-weights breakdown",
+  "grocery": "Grocery",
+  "groceryDesc": "Aisle-sorted shopping checklist",
+  "nutrition": "Nutrition",
+  "nutritionDesc": "Macro targets & BMR calculator",
+  "settings": "Settings",
+  "settingsDesc": "Language, regions & backups"
+}

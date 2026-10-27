@@ -1,0 +1,17 @@
+{
+  "appName": "What Eat Today",
+  "appTagline": "Discover mouth-watering street food & nearby spots",
+  "loading": "Loading...",
+  "error": "An error occurred",
+  "retry": "Try again",
+  "save": "Save",
+  "cancel": "Cancel",
+  "close": "Close",
+  "filter": "Filter",
+  "clearFilter": "Clear filters",
+  "all": "All",
+  "viewDetails": "View details",
+  "share": "Share",
+  "freeAndOpenSource": "100% Free & Open-Source",
+  "localFirst": "Local-First Storage (Privacy Guaranteed)"
+}

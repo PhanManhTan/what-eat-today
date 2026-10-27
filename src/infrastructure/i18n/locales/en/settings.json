@@ -1,0 +1,22 @@
+{
+  "title": "Settings & Preferences",
+  "subtitle": "Manage language, region, and local privacy storage",
+  "language": "Display Language",
+  "languageDesc": "Choose your preferred language for the application",
+  "vietnamese": "Tiếng Việt (vi-VN)",
+  "english": "English (en-US)",
+  "location": "Discovery Region",
+  "locationDesc": "Default city for nearby restaurant recommendations",
+  "hcmc": "Ho Chi Minh City (Saigon)",
+  "hanoi": "Hanoi (Coming soon)",
+  "danang": "Da Nang (Coming soon)",
+  "theme": "Theme Mode",
+  "themeLight": "Warm Light (Rice paper)",
+  "themeDark": "Deep Dark (Espresso)",
+  "storagePrivacy": "Local Storage & Privacy",
+  "storagePrivacyDesc": "All favorites and swipe history stay strictly in your browser using IndexedDB. No personal usage data is sent to external servers.",
+  "clearLocalData": "Clear All Local Data",
+  "clearLocalDataConfirm": "Are you sure you want to clear all your saved favorites and preferences?",
+  "clearSuccess": "Local data cleared successfully",
+  "version": "Open Source Version"
+}

@@ -1,0 +1,17 @@
+{
+  "appName": "Hôm Nay Ăn Gì?",
+  "appTagline": "Khám phá món ngon đường phố & quán ăn gần bạn",
+  "loading": "Đang tải...",
+  "error": "Đã có lỗi xảy ra",
+  "retry": "Thử lại",
+  "save": "Lưu",
+  "cancel": "Hủy",
+  "close": "Đóng",
+  "filter": "Bộ lọc",
+  "clearFilter": "Xóa bộ lọc",
+  "all": "Tất cả",
+  "viewDetails": "Xem chi tiết",
+  "share": "Chia sẻ",
+  "freeAndOpenSource": "100% Miễn phí & Mã nguồn mở",
+  "localFirst": "Lưu trữ nội bộ (Bảo mật quyền riêng tư)"
+}

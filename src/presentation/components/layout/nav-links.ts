@@ -1,48 +1,87 @@
 import {
-  LayoutDashboard,
-  UtensilsCrossed,
+  Compass,
+  Heart,
   CalendarDays,
+  UtensilsCrossed,
   ShoppingCart,
+  Activity,
   Settings,
+  Sparkles,
   type LucideIcon,
 } from 'lucide-react';
 
 export interface NavItem {
-  name: string;
+  id: string;
+  nameKey: string;
+  descKey: string;
   href: string;
   icon: LucideIcon;
-  description: string;
+  isBottomNav?: boolean;
 }
 
 export const NAV_ITEMS: NavItem[] = [
   {
-    name: 'Dashboard',
+    id: 'discover',
+    nameKey: 'discover',
+    descKey: 'discoverDesc',
     href: '/',
-    icon: LayoutDashboard,
-    description: 'Macro overview & daily nutrition targets',
+    icon: Sparkles,
+    isBottomNav: true,
   },
   {
-    name: 'Recipes',
-    href: '/recipes',
-    icon: UtensilsCrossed,
-    description: 'Recipe catalog with exact gram weights',
+    id: 'explore',
+    nameKey: 'explore',
+    descKey: 'exploreDesc',
+    href: '/explore',
+    icon: Compass,
+    isBottomNav: true,
   },
   {
-    name: 'Meal Planner',
+    id: 'favorites',
+    nameKey: 'favorites',
+    descKey: 'favoritesDesc',
+    href: '/favorites',
+    icon: Heart,
+    isBottomNav: true,
+  },
+  {
+    id: 'planner',
+    nameKey: 'planner',
+    descKey: 'plannerDesc',
     href: '/planner',
     icon: CalendarDays,
-    description: '7-day manual meal planner with daily floors',
+    isBottomNav: true,
   },
   {
-    name: 'Grocery List',
+    id: 'recipes',
+    nameKey: 'recipes',
+    descKey: 'recipesDesc',
+    href: '/recipes',
+    icon: UtensilsCrossed,
+    isBottomNav: false,
+  },
+  {
+    id: 'grocery',
+    nameKey: 'grocery',
+    descKey: 'groceryDesc',
     href: '/grocery',
     icon: ShoppingCart,
-    description: 'Aisle-sorted smart shopping checklist',
+    isBottomNav: false,
   },
   {
-    name: 'Settings',
+    id: 'nutrition',
+    nameKey: 'nutrition',
+    descKey: 'nutritionDesc',
+    href: '/nutrition',
+    icon: Activity,
+    isBottomNav: false,
+  },
+  {
+    id: 'settings',
+    nameKey: 'settings',
+    descKey: 'settingsDesc',
     href: '/settings',
     icon: Settings,
-    description: 'Local profile, units, and data backups',
+    isBottomNav: true,
   },
 ];

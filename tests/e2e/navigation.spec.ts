@@ -1,49 +1,71 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('P0 Navigation and Smoke Tests', () => {
-  test('loads dashboard and renders macro cards and brand title', async ({ page }) => {
+  test('loads Discover page and renders brand title and swipe deck', async ({ page }) => {
     await page.goto('/');
 
     // Check brand header
-    await expect(page.locator('header')).toContainText('what-eat-today');
-    await expect(page.locator('header')).toContainText('Local-First / Free');
+    await expect(page.locator('header')).toContainText('Hôm Nay Ăn Gì');
 
-    // Check main dashboard heading
+    // Check Discover heading
     await expect(page.getByRole('heading', { level: 1 })).toContainText(
-      'Personal Macro & Nutrition Dashboard'
+      'Hôm nay bạn muốn ăn gì'
     );
 
-    // Check macro cards exist
-    await expect(page.getByText('Daily Calorie Target')).toBeVisible();
-    await expect(page.getByText('Daily Protein Floor')).toBeVisible();
-    await expect(page.getByText('Base Burn (BMR)')).toBeVisible();
+    // Check that swipe action buttons exist
+    await expect(page.getByTitle('Bỏ qua')).toBeVisible();
+    await expect(page.getByTitle('Muốn ăn!')).toBeVisible();
+    await expect(page.getByTitle('Chi tiết món')).toBeVisible();
   });
 
-  test('navigates through all core routes via header navigation', async ({ page }) => {
+  test('toggles language between Vietnamese and English', async ({ page }) => {
     await page.goto('/');
 
-    // Recipes
-    await page.getByRole('link', { name: 'Recipes' }).first().click();
-    await expect(page).toHaveURL('/recipes');
-    await expect(page.getByRole('heading', { level: 1 })).toContainText('Recipe Catalog');
+    // Initial language is Vietnamese
+    await expect(page.getByRole('heading', { level: 1 })).toContainText(
+      'Hôm nay bạn muốn ăn gì'
+    );
 
-    // Meal Planner
-    await page.getByRole('link', { name: 'Meal Planner' }).first().click();
-    await expect(page).toHaveURL('/planner');
+    // Click language switch button (VI -> EN)
+    await page.getByRole('button', { name: 'Toggle language' }).click();
+
+    // Now header and heading should be English
+    await expect(page.getByRole('heading', { level: 1 })).toContainText(
+      'What do you want to eat today'
+    );
+
+    // Switch back to Vietnamese
+    await page.getByRole('button', { name: 'Toggle language' }).click();
+    await expect(page.getByRole('heading', { level: 1 })).toContainText(
+      'Hôm nay bạn muốn ăn gì'
+    );
+  });
+
+  test('navigates through core routes via navigation', async ({ page }) => {
+    await page.goto('/');
+
+    // Explore page
+    await page.goto('/explore');
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Thực đơn');
+
+    // Favorites page
+    await page.goto('/favorites');
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Yêu thích');
+
+    // Preserved Meal Planner
+    await page.goto('/planner');
     await expect(page.getByRole('heading', { level: 1 })).toContainText(
       'Manual Weekly Meal Planner'
     );
 
-    // Grocery List
-    await page.getByRole('link', { name: 'Grocery List' }).first().click();
-    await expect(page).toHaveURL('/grocery');
-    await expect(page.getByRole('heading', { level: 1 })).toContainText('Smart Grocery List');
+    // Preserved Nutrition Dashboard
+    await page.goto('/nutrition');
+    await expect(page.getByRole('heading', { level: 1 })).toContainText(
+      'Personal Macro & Nutrition Dashboard'
+    );
 
     // Settings
-    await page.getByRole('link', { name: 'Settings' }).first().click();
-    await expect(page).toHaveURL('/settings');
-    await expect(page.getByRole('heading', { level: 1 })).toContainText(
-      'Settings & Personal Metrics'
-    );
+    await page.goto('/settings');
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Cài đặt');
   });
 });

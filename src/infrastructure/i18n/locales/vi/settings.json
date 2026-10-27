@@ -1,0 +1,22 @@
+{
+  "title": "Cài đặt & Tùy chọn",
+  "subtitle": "Quản lý ngôn ngữ, khu vực và dữ liệu cục bộ",
+  "language": "Ngôn ngữ hiển thị",
+  "languageDesc": "Chọn ngôn ngữ bạn muốn sử dụng trong ứng dụng",
+  "vietnamese": "Tiếng Việt (vi-VN)",
+  "english": "English (en-US)",
+  "location": "Khu vực ẩm thực",
+  "locationDesc": "Thành phố mặc định để gợi ý quán ăn gần nhất",
+  "hcmc": "TP. Hồ Chí Minh (Sài Gòn)",
+  "hanoi": "Hà Nội (Sắp ra mắt)",
+  "danang": "Đà Nẵng (Sắp ra mắt)",
+  "theme": "Chế độ giao diện",
+  "themeLight": "Sáng ấm áp (Rice paper)",
+  "themeDark": "Tối dễ nhìn (Espresso)",
+  "storagePrivacy": "Lưu trữ & Quyền riêng tư",
+  "storagePrivacyDesc": "Toàn bộ món yêu thích và lịch sử vuốt được lưu trữ nội bộ bằng IndexedDB trên máy của bạn. Không có dữ liệu cá nhân nào bị gửi lên máy chủ.",
+  "clearLocalData": "Xóa toàn bộ dữ liệu nội bộ",
+  "clearLocalDataConfirm": "Bạn có chắc chắn muốn xóa tất cả món yêu thích và cài đặt đã lưu?",
+  "clearSuccess": "Đã xóa sạch dữ liệu nội bộ thành công",
+  "version": "Phiên bản mã nguồn mở"
+}

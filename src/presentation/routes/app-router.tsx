@@ -1,5 +1,8 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { AppLayout } from '../components/layout/app-layout';
+import { DiscoverPage } from '../pages/discover-page';
+import { ExplorePage } from '../pages/explore-page';
+import { FavoritesPage } from '../pages/favorites-page';
 import { DashboardPage } from '../pages/dashboard-page';
 import { RecipesPage } from '../pages/recipes-page';
 import { MealPlannerPage } from '../pages/meal-planner-page';
@@ -13,19 +16,31 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <DashboardPage />,
+        element: <DiscoverPage />,
       },
       {
-        path: 'recipes',
-        element: <RecipesPage />,
+        path: 'explore',
+        element: <ExplorePage />,
+      },
+      {
+        path: 'favorites',
+        element: <FavoritesPage />,
       },
       {
         path: 'planner',
         element: <MealPlannerPage />,
       },
       {
+        path: 'recipes',
+        element: <RecipesPage />,
+      },
+      {
         path: 'grocery',
         element: <GroceryListPage />,
+      },
+      {
+        path: 'nutrition',
+        element: <DashboardPage />,
       },
       {
         path: 'settings',
