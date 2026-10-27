@@ -1,0 +1,9 @@
+services:
+  what-eat-today:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: what-eat-today-app
+    ports:
+      - '3000:80'
+    restart: unless-stopped
